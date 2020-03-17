@@ -1,15 +1,19 @@
 package com.example.sdafkhasidrhfas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
 
+import android.app.Activity;
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.sdafkhasidrhfas.databinding.ActivityMainBinding;
 
+public class MainActivity extends AppCompatActivity {
+    ActivityMainBinding binding = null;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
 
     }
